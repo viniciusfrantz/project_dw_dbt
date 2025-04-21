@@ -1,0 +1,102 @@
+[0m16:21:08.619082 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216D5C9DFD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216D3982210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216D6749F90>]}
+
+
+============================== 16:21:08.625014 | 4a949454-4532-4938-a3f9-0f26507ea32f ==============================
+[0m16:21:08.625014 [info ] [MainThread]: Running with dbt=1.9.4
+[0m16:21:08.626389 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '../', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt init', 'send_anonymous_usage_stats': 'True'}
+[0m16:21:41.318696 [debug] [MainThread]: Starter project path: C:\Users\vinic\ciencia_de_dados\Projects\project_datawarehouse_dbt\.venv\Lib\site-packages\dbt\include\starter_project
+[0m16:21:41.355898 [info ] [MainThread]: 
+Your new dbt project "datawarehouse" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:21:41.356899 [info ] [MainThread]: Setting up your profile.
+[0m16:22:59.182780 [error] [MainThread]: Encountered an error:
+
+[0m16:22:59.186801 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\vinic\ciencia_de_dados\Projects\project_datawarehouse_dbt\.venv\Lib\site-packages\dbt\cli\requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\vinic\ciencia_de_dados\Projects\project_datawarehouse_dbt\.venv\Lib\site-packages\dbt\cli\requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\vinic\ciencia_de_dados\Projects\project_datawarehouse_dbt\.venv\Lib\site-packages\dbt\cli\main.py", line 477, in init
+    results = task.run()
+  File "C:\Users\vinic\ciencia_de_dados\Projects\project_datawarehouse_dbt\.venv\Lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\vinic\ciencia_de_dados\Projects\project_datawarehouse_dbt\.venv\Lib\site-packages\dbt\task\init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vinic\ciencia_de_dados\Projects\project_datawarehouse_dbt\.venv\Lib\site-packages\dbt\task\init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vinic\ciencia_de_dados\Projects\project_datawarehouse_dbt\.venv\Lib\site-packages\dbt\task\init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "C:\Users\vinic\ciencia_de_dados\Projects\project_datawarehouse_dbt\.venv\Lib\site-packages\dbt\task\init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ~~~~~~~~~~~~^
+        text, default=default, hide_input=hide_input, type=type
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\vinic\ciencia_de_dados\Projects\project_datawarehouse_dbt\.venv\Lib\site-packages\click\termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\vinic\ciencia_de_dados\Projects\project_datawarehouse_dbt\.venv\Lib\site-packages\click\termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m16:22:59.188478 [debug] [MainThread]: Command `dbt init` failed at 16:22:59.188272 after 110.73 seconds
+[0m16:22:59.189056 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216D6E98FC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216D6CE0290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216D6D085A0>]}
+[0m16:22:59.189674 [debug] [MainThread]: Flushing usage events
+[0m16:23:00.106213 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:23:07.502409 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ACEB20DE80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ACE8F16210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ACEBCB9D10>]}
+
+
+============================== 16:23:07.507150 | 81734519-b23d-44cc-9e11-e6961df4a3ff ==============================
+[0m16:23:07.507150 [info ] [MainThread]: Running with dbt=1.9.4
+[0m16:23:07.507925 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '../', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt init', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:23:12.951366 [info ] [MainThread]: A project called datawarehouse already exists here.
+[0m16:23:12.952695 [debug] [MainThread]: Command `dbt init` succeeded at 16:23:12.952543 after 5.60 seconds
+[0m16:23:12.953172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ACEC1FC8A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ACEC1F7650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ACEC0808D0>]}
+[0m16:23:12.953708 [debug] [MainThread]: Flushing usage events
+[0m16:23:13.764100 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:24:44.928996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000193C0E19E80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000193BEB76210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000193C18C9D10>]}
+
+
+============================== 16:24:44.933956 | 0310e8f1-a564-461d-9278-ffcb2b5b798a ==============================
+[0m16:24:44.933956 [info ] [MainThread]: Running with dbt=1.9.4
+[0m16:24:44.934827 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '../', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m16:24:49.202344 [debug] [MainThread]: Starter project path: C:\Users\vinic\ciencia_de_dados\Projects\project_datawarehouse_dbt\.venv\Lib\site-packages\dbt\include\starter_project
+[0m16:24:49.231450 [info ] [MainThread]: 
+Your new dbt project "datawarehouse" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:24:49.232430 [info ] [MainThread]: Setting up your profile.
+[0m16:25:49.343563 [info ] [MainThread]: Profile datawarehouse written to ..\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m16:25:49.345243 [debug] [MainThread]: Command `dbt init` succeeded at 16:25:49.345034 after 64.56 seconds
+[0m16:25:49.345807 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000193C1E0EFD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000193C1E07770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000193C1C918C0>]}
+[0m16:25:49.346372 [debug] [MainThread]: Flushing usage events
+[0m16:25:50.255702 [debug] [MainThread]: An error was encountered while trying to flush usage events
