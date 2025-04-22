@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: dm_commodities
+    description: "Datamart to commodities data integrated"
+    columns:
+      - name: date
+        description: "Date AAAA-MM-DD"
+      - name: symbol
+        description: "Commodity Symbol - yahoo finance"
+      - name: close_price
+        description: "price of commoditiy"
+      - name: action
+        description: "buy or sell"
+      - name: quantity
+        description: quantity ordered
+      - name: value
+        description: "Transaction value"
+      - name: profit
+        description: "gain or loss on transaction"
