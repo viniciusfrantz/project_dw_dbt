@@ -1,0 +1,27 @@
+version: 2
+# parameters of databases
+sources:
+  - name: dbsales
+    schema: public
+    description: "A starter dbt model"
+    tables:
+      - name: commodities
+        description: "Table with hystorical data of commodities"
+        columns:
+          - name: Date
+            description: "Day of quote"
+          - name: Close
+            description: "Close price from ativo"
+          - name: simbol
+            description: "commodity ticker"
+      - name: movimentacao_commodities
+        description: "Table with commodities orders"
+        columns:
+          - name: date
+            description: "Day of transaction"
+          - name: symbol
+            description: "Ticker in Yahoo Finance"
+          - name: action
+            description: "buy or sell"
+          - name: quantity
+            description: "quantity ordered"
