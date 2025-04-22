@@ -1,5 +1,6 @@
 # PROJECT DW DBT
 
+## Project structure
 
 ```mermaid
 graph TD;
