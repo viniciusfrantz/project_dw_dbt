@@ -1,5 +1,4 @@
 # README
-# README
 
 ## PROJECT DW DBT
 
@@ -41,27 +40,27 @@ project_dw_dbt/
 ```
 
 ```mermaid
-flowchart TD;
-    A([Início]) --> B[Coletar Dados das Commodities]
+fflowchart TD;
+    A([Start]) --> B[Collect Commodity Data]
     
-    %% Etapas paralelas na Extração
-    B --> B1[Acessar APIs Externas]
-    B --> B2[Ler Arquivos Locais]
+    %% Parallel steps in Extraction
+    B --> B1[Access External APIs]
+    B --> B2[Read Local Files]
     
-    %% Ambas levam à próxima etapa
-    B1 --> C[Pré-processar Dados]
+    %% Both lead to the next step
+    B1 --> C[Preprocess Data]
     B2 --> C
 
-    %% Transformação paralela
-    C --> D1[Limpeza e Normalização]
-    C --> D2[Enriquecimento com Metadados]
+    %% Parallel Transformation
+    C --> D1[Cleaning and Normalization]
+    C --> D2[Enrichment with Metadata]
 
-    D1 --> E[Montar DataFrame Final]
+    D1 --> E[Build Final DataFrame]
     D2 --> E
 
-    %% Carga
-    E --> F[Carregar no PostgreSQL]
-    F --> G([Fim])
+    %% Load
+    E --> F[Load into PostgreSQL]
+    F --> G([End])
 ```
 
 🙌 Credits
