@@ -1,5 +1,4 @@
 # README
-
 ## PROJECT DW DBT
 
 This project demonstrates how to build a Data Warehouse using **dbt (Data Build Tool)**. It transforms and organizes raw data (from files and APIs) into a PostgreSQL database hosted on **AWS**, following data engineering best practices.
