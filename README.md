@@ -39,7 +39,7 @@ project_dw_dbt/
 ```
 
 ```mermaid
-fflowchart TD;
+flowchart TD;
     A([Start]) --> B[Collect Commodity Data]
     
     %% Parallel steps in Extraction
